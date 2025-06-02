@@ -1,92 +1,63 @@
-이 프로젝트는 [`EasyNext`](https://github.com/easynext/easynext)를 사용해 생성된 [Next.js](https://nextjs.org) 프로젝트입니다.
+# 이름 궁합 테스트
 
-## Getting Started
+한글 이름의 획수를 기반으로 두 사람의 궁합을 계산하는 웹 애플리케이션입니다.
 
-개발 서버를 실행합니다.<br/>
-환경에 따른 명령어를 사용해주세요.
+## 기능
 
+- 두 사람의 이름을 입력하여 궁합 계산
+- 한글 자모 분리 및 획수 계산
+- 궁합 계산 과정 시각화
+- 궁합 점수 및 결과 메시지 제공
+
+## 기술 스택
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+
+## 시작하기
+
+1. 저장소 클론
+```bash
+git clone [repository-url]
+cd [repository-name]
+```
+
+2. 의존성 설치
+```bash
+npm install
+```
+
+3. 개발 서버 실행
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 결과를 확인할 수 있습니다.
-
-`app/page.tsx` 파일을 수정하여 페이지를 편집할 수 있습니다. 파일을 수정하면 자동으로 페이지가 업데이트됩니다.
-
-## 기본 포함 라이브러리
-
-- [Next.js](https://nextjs.org)
-- [React](https://react.dev)
-- [Tailwind CSS](https://tailwindcss.com)
-- [TypeScript](https://www.typescriptlang.org)
-- [ESLint](https://eslint.org)
-- [Prettier](https://prettier.io)
-- [Shadcn UI](https://ui.shadcn.com)
-- [Lucide Icon](https://lucide.dev)
-- [date-fns](https://date-fns.org)
-- [react-use](https://github.com/streamich/react-use)
-- [es-toolkit](https://github.com/toss/es-toolkit)
-- [Zod](https://zod.dev)
-- [React Query](https://tanstack.com/query/latest)
-- [React Hook Form](https://react-hook-form.com)
-- [TS Pattern](https://github.com/gvergnaud/ts-pattern)
-
-## 사용 가능한 명령어
-
-한글버전 사용
-
-```sh
-easynext lang ko
+4. 브라우저에서 확인
+```
+http://localhost:3000
 ```
 
-최신버전으로 업데이트
+## 사용 방법
 
-```sh
-npm i -g @easynext/cli@latest
-# or
-yarn add -g @easynext/cli@latest
-# or
-pnpm add -g @easynext/cli@latest
-```
+1. 메인 페이지에서 "시작하기" 버튼 클릭
+2. 두 사람의 이름 입력
+3. "궁합 보기" 버튼 클릭
+4. 궁합 결과 확인
+   - 계산 과정 확인
+   - 궁합 점수 확인
+   - 결과 메시지 확인
 
-Supabase 설정
+## 궁합 계산 방식
 
-```sh
-easynext supabase
-```
+1. 각 글자의 획수 계산
+   - 초성 획수
+   - 중성 획수
+   - 종성 획수
+2. 이름을 번갈아가며 획수 배열 생성
+3. 인접한 숫자들을 더하고 10 이상이면 10으로 나눈 나머지 사용
+4. 최종 두 자리 숫자로 궁합 점수 계산
 
-Next-Auth 설정
+## 라이선스
 
-```sh
-easynext auth
-
-# ID,PW 로그인
-easynext auth idpw
-# 카카오 로그인
-easynext auth kakao
-```
-
-유용한 서비스 연동
-
-```sh
-# Google Analytics
-easynext gtag
-
-# Microsoft Clarity
-easynext clarity
-
-# ChannelIO
-easynext channelio
-
-# Sentry
-easynext sentry
-
-# Google Adsense
-easynext adsense
-```
+MIT
